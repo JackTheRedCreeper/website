@@ -3,5 +3,5 @@ layout: post
 title: A Great First Post
 ---
 
-
-Test!
+This is it!
+What a wonderful post!
