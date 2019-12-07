@@ -4,6 +4,7 @@ author: JackTheRedCreeper
 description: TTRPGs, gamedev & programming, conceptual and applied
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
+published: true
 
 # Build settings
 markdown: kramdown
