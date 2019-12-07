@@ -8,4 +8,5 @@ published: true
 markdown: kramdown
 theme: jekyll-theme-slate
 
+url: "https://jacktheredcreeper.github.io"
 baseurl: "/website"
