@@ -10,3 +10,4 @@ theme: jekyll-theme-slate
 
 url: "https://jacktheredcreeper.github.io"
 baseurl: "/website"
+rmalink: /:categories/:title:output_ext
