@@ -1,10 +1,7 @@
 # basic options
 title: JackTheRedCreeper's blog
-author: GitHub User
-email: your-email@domain.com
+author: JackTheRedCreeper
 description: TTRPGs, gamedev & programming, conceptual and applied
-twitter_username: jekyllrb
-github_username:  jekyll
 
 # Build settings
 markdown: kramdown
