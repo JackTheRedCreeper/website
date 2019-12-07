@@ -7,3 +7,5 @@ published: true
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-slate
+
+baseurl: "/website"
