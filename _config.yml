@@ -2,7 +2,8 @@
 title: JackTheRedCreeper's blog
 author: JackTheRedCreeper
 description: TTRPGs, gamedev & programming, conceptual and applied
-published: true
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
 
 # Build settings
 markdown: kramdown
