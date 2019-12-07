@@ -2,6 +2,7 @@
 title: JackTheRedCreeper's blog
 author: JackTheRedCreeper
 description: TTRPGs, gamedev & programming, conceptual and applied
+published: true
 
 # Build settings
 markdown: kramdown
