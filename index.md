@@ -1,7 +1,7 @@
 <html>
     <body>
-        <h1>Hello World!</h1>
-        <p>gh-pages rock!</p>
+        <h1>Welcome to Jack's den of knowledge!</h1>
+        <p>This blog seeks to record and accumulate most of my knowledge, ideas and executions, for reference, easy sharing and future retrospections. Feel free to prod around at anything! </p>
     </body>
 </html>
 
