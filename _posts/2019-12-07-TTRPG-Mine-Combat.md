@@ -27,6 +27,7 @@ Consequences are simple: Party wins and pirates are defeated and they head to an
   <li>The players have a battlefield advantage, to make up for their lack of knowledge of the area.</li>
   <li>The map will be mostly a corridor, with the left half littered with cover and walls for close combat, while the right half will be mostly open for long ranged combat.</li>
 </ul>
+With all these things in consideration, we can finally start with a map sketch. I use paint.net, but you can use anything - normal Paint, Photoshop or even a pencil!
 
 
 
