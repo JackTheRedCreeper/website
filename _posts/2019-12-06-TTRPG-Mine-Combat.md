@@ -1,8 +1,7 @@
 ---
 layout: post
 title: (TTRPG) Combat design - Pirates in a mine
-categories: [TTRPG]
-tags: [creation]
+tags: [TTRPG, Gamedev]
 ---
 
 In the Play-By-Post Starfinder game I'm running, the party has headed into a mine that is under attack by pirates. They have received word of a cave-in, and the miners can't help because of the hostile pirates. This post details the creation of such encounter.
