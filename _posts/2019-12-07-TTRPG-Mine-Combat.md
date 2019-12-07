@@ -1,6 +1,7 @@
 ---
 layout: post
 title: (TTRPG) Combat design - Pirates in a mine
+categories: [posts]
 tags: [TTRPG, Gamedev]
 published: true
 ---
