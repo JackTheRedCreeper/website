@@ -1,6 +1,6 @@
 ---
 layout: post
-title: (TTRPG) Combat design - Pirates assaulting a mine
+title: (TTRPG) Combat encounter design - Pirates assaulting a mine
 tags: [TTRPG, Gamedev]
 ---
 
