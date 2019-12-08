@@ -15,10 +15,12 @@ tags: [TTRPG, Gamedev]
 
 <p>In this case, I want the players to fight the pirates and then rescue the miners. This means that our encounter should play at a distance from the cave-in, so the players focus on the combat at hand. I do not intend on adding a time limit.</p>
 
-<p>Even though this is meant to be a simple fight encounter, we must check on motivations and consequences. These will also determine both sides' possible courses of action.</p>
-<p>The motivations for the pirates are purely evil, and they will not try to retreat as they can't escape the mines safely. They will fight to the death, but not stupidly.</p>
-<p>The players' motivations are: The attaack is happening in a town they're residing at and the call of 'greater good' and adventure. Some things are better left simple.</p>
-<p>Consequences are simple: Party wins and pirates are defeated and they head to another part of the pirate assault, or party loses and have to book it out, losing fame and resources, or even die.</p>
+<p>Even though this is meant to be a simple fight encounter, we must check on motivations and consequences. These will also determine both sides' possible courses of action:</p>
+<ul>
+  <li>The motivations for the pirates are purely evil, and they will not try to retreat as they can't escape the mines safely. They will fight to the death, but not stupidly.</li>
+  <li>The players' motivations are: The attaack is happening in a town they're residing at and the call of 'greater good' and adventure. Some things are better left simple.</li>
+  <li>Consequences are simple: Party wins and pirates are defeated and they head to another part of the pirate assault, or party loses and have to book it out, losing fame and resources, or even die.</li>
+</ul>
 
 <p>With this in mind, I start drawing up a sketch of the battlefield. My key thoughts for this battle are:</p>
 <ul>
