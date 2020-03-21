@@ -6,6 +6,8 @@ tags:
 
 Hello and thank you for your interest! It annoys me agreeing that I haven't done a whole lot. I have touched many projects but none of them seem to come to fruition, or far enough that it would be worthy of a post. I hope I can explain what has been going on behind the scenes.
 
+Around October and November 2019 I joined some game projects. Needless to say, they didn't flourish, due to various motives. They were called off during December.
+
 During December 2019, I was writting down a post on how to make a TTRPG combat session. From the primer to the conclusion, going through guiding the players' actions and thoughts, and most importantly, battlefield design.
 However, a while after that, one of the worst things struck me: Burnout. I was tired, unmotivated, irritated.
 
