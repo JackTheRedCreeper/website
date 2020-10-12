@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Truthseeker - Starfinder info bot for Discord!
-tags: [Gamedev], [Programming]
+tags: [Gamedev] [Programming]
 ---
 
 Truthseeker is a simple Discord bot that aims to help Starfinder TTRPG players by quickly providing them with info on demand. The bot is made in collaboration with the admins of https://thehiddentruth.info/ (name is an inside joke, we swear!) and all the information is lifted from there.
