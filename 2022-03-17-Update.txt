@@ -1,0 +1,19 @@
+---
+layout: post
+title: March 2022 update
+tags: Update
+---
+
+Even if I don't have much to show, I guess I should still write down what's up.
+
+I landed a job half a year ago - around August, but I didn't write anything since I was still getting my feet wet. Couple that with us not having any proper work for about four months and the radio silence becomes deafening.
+Nowadays I work at a GDPR-related area and it's been fun - database work is simple and enjoyable, and I don't have to deal with the infernal Eclipse + Java Spring + multi-layered structure software. Specially when Eclipse would randomly decide that no, your workspace won't work, so it's time to set it all up again. Sigh.
+But again, I'm comfortable now. Even if they're demanding us to at least go to the office once a week. That 3-4 hour train commute kills me just by thinking about it.
+
+On a more personal hobby side, I have been dabbling into LUA for a while now. To be precise, Starfall chips in Garry's Mod. What I have right now is mostly tests: A small shop, a *very* WIP RTS system, scavengeable materials... Building blocks, really. Sadly I have to admit that I haven't touched the Savage Worlds AI much, but there are some major core changes planned. Those should also re-spark my interest for it.
+
+So yeah, I don't have much to show on the programming side because I already program for half a day! Apologies to everyone!
+
+Oh, also, I have a Valve Index VR set. I want to do something with it, but I have no ideas yet.
+
+Thank you for visiting!
