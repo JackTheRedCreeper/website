@@ -1,0 +1,116 @@
+<body>
+<canvas id="myCanvas" width="1500" height="800" style="border:1px solid #000000;">
+<script>
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+
+// Cell obj
+const Cell = {
+  x: 0,
+  y: 0,
+  state: 1,
+  nextState: 1,
+  neighbors: 0
+};
+
+// Basic values
+const xMax = 250;
+const yMax = 230;
+var xCells = [];
+ctx.font = "10px Arial";
+
+// Generate field
+for (var x=0;x<xMax;x++) {
+	yCells = [];
+	for (var y=0;y<yMax;y++) {
+		newCell = Object.create(Cell);
+		newCell.x = x;
+		newCell.y = y;
+		newCell.state = Math.random() > 0.9;
+		newCell.nextState = 0;
+		yCells[y] = newCell;
+	}
+	xCells[x] = yCells;
+}
+
+// Make a loop
+window.requestAnimationFrame(() => this.gameLoop());
+
+function gameLoop() {
+	// Process cells
+	this.checkCells();
+
+    ctx.clearRect(0, 0, c.width, c.height);
+
+	// Draw shit
+	this.drawCells();
+
+    // The loop function has reached it's end, keep requesting new frames
+    setTimeout( () => {
+        window.requestAnimationFrame(() => this.gameLoop());
+    }, 100) // The delay will make the game easier to follow
+}
+
+function checkCells() {
+	
+	for (var x=0;x<xMax;x++) {
+		for (var y=0;y<yMax;y++) {
+			// Let's get neighbors, including diagonals (important!):
+			TotalNeighbors = 0;
+			for (var II=-1;II<=1;II++) {
+				// Ignore cells out of bounds
+				if (x+II >= xMax || x+II < 0) {continue}
+				
+				for (var IJ=-1;IJ<=1;IJ++) {
+					// Ignore current cell
+					if (II == 0 && IJ == 0) {continue}
+					// Ignore cells out of bounds
+					if (y+IJ >= yMax || y+IJ < 0) {continue}
+					
+					if (xCells[x+II][y+IJ].state == 1) { TotalNeighbors += 1 }
+				}
+			}
+			//Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+			//Any live cell with more than three live neighbours dies, as if by overpopulation.                
+			//Any live cell with two or three live neighbours lives on to the next generation.
+			if (xCells[x][y].state == 1) {
+				if (TotalNeighbors == 2 || TotalNeighbors == 3) {
+					xCells[x][y].nextState = 1;
+				} else {
+					xCells[x][y].nextState = 0;
+				}
+			} else
+			// Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+			{
+				if (TotalNeighbors == 3) {
+					xCells[x][y].nextState = 1;
+				}
+			}
+				
+		}
+	}
+	
+	for (var x=0;x<xMax;x++) {
+		for (var y=0;y<yMax;y++) {
+			xCells[x][y].state = xCells[x][y].nextState;
+			xCells[x][y].nextState = 0;
+		}
+	}
+}
+
+function drawCells() {
+	for (var x=0;x<xMax;x++) {
+		for (var y=0;y<yMax;y++) {
+			if (xCells[x][y].state == 1) {
+				ctx.fillText("o", x*10, y*10);
+			}	
+		}
+	}
+}
+
+
+
+
+</script>
+</canvas>
+</body>
