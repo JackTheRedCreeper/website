@@ -98,8 +98,7 @@ function checkCells() {
 					xCells[x][y].nextState = 1;
 					xCells[x][y].nextColor = xCells[x][y].color;
 					xCells[x][y].lifetime++;
-					if (xCells[x][y].lifetime > 30) {
-						if (Math.random() > 0.95) {
+					if (xCells[x][y].lifetime > 50) {
 							xCells[x][y].nextColor = [255,255,255];
 							xCells[x][y].nextState = 0;
 							xCells[x][y].lifetime = 0;
@@ -113,7 +112,6 @@ function checkCells() {
 								xCells[x][y+1].nextState = 0;
 								xCells[x][y+1].lifetime = 0;
 							}
-						}
 					}
 				} else {
 					xCells[x][y].nextColor = [255,255,255];
