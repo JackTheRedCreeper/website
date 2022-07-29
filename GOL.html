@@ -1,5 +1,5 @@
 <body>
-<canvas id="myCanvas" width="2500" height="2000" style="border:1px solid #000000;">
+<canvas id="myCanvas" width="4000" height="4000" style="border:1px solid #000000;">
 <script>
 const c = document.getElementById("myCanvas");
 const ctx = c.getContext("2d");
@@ -14,8 +14,8 @@ const Cell = {
 };
 
 // Basic values
-const xMax = 250;
-const yMax = 230;
+const xMax = 400;
+const yMax = 400;
 var xCells = [];
 ctx.font = "10px Arial";
 
@@ -28,6 +28,19 @@ for (var x=0;x<xMax;x++) {
 		newCell.y = y;
 		newCell.state = Math.random() > 0.9;
 		newCell.nextState = 0;
+		newCell.nextColor = [255,255,255];
+		if (newCell.state == 1) {
+			num = Math.random();
+			if (num < 0.33) {
+				newCell.color = [255,0,0];
+			} 
+			else if (num > 0.67) {
+				newCell.color = [0,255,0];
+			} 
+			else {
+				newCell.color = [0,0,255];
+			} 
+		} else { newCell.color = [255,255,255]; }
 		yCells[y] = newCell;
 	}
 	xCells[x] = yCells;
@@ -42,7 +55,7 @@ function gameLoop() {
 
     ctx.clearRect(0, 0, c.width, c.height);
 
-	// Draw shit
+	// Draw stuff
 	this.drawCells();
 
     // The loop function has reached it's end, keep requesting new frames
@@ -57,6 +70,7 @@ function checkCells() {
 		for (var y=0;y<yMax;y++) {
 			// Let's get neighbors, including diagonals (important!):
 			TotalNeighbors = 0;
+			NeighborColors = [];
 			for (var II=-1;II<=1;II++) {
 				// Ignore cells out of bounds
 				if (x+II >= xMax || x+II < 0) {continue}
@@ -67,8 +81,14 @@ function checkCells() {
 					// Ignore cells out of bounds
 					if (y+IJ >= yMax || y+IJ < 0) {continue}
 					
-					if (xCells[x+II][y+IJ].state == 1) { TotalNeighbors += 1 }
+					if (xCells[x+II][y+IJ].state == 1) {
+						TotalNeighbors += 1;
+						if (TotalNeighbors == 4) {break;}
+						NeighborColors.push(xCells[x+II][y+IJ].color);
+					}
+					
 				}
+				if (TotalNeighbors == 4) {break;}
 			}
 			//Any live cell with fewer than two live neighbours dies, as if by underpopulation.
 			//Any live cell with more than three live neighbours dies, as if by overpopulation.                
@@ -76,7 +96,9 @@ function checkCells() {
 			if (xCells[x][y].state == 1) {
 				if (TotalNeighbors == 2 || TotalNeighbors == 3) {
 					xCells[x][y].nextState = 1;
+					xCells[x][y].nextColor = xCells[x][y].color;
 				} else {
+					xCells[x][y].nextColor = [255,255,255];
 					xCells[x][y].nextState = 0;
 				}
 			} else
@@ -84,6 +106,24 @@ function checkCells() {
 			{
 				if (TotalNeighbors == 3) {
 					xCells[x][y].nextState = 1;
+					
+					// Calculate neighbor with strongest color
+					NeighborPower = [
+						(NeighborColors[0][0]+NeighborColors[0][1]+NeighborColors[0][2]),
+						(NeighborColors[1][0]+NeighborColors[1][1]+NeighborColors[1][2]),
+						(NeighborColors[2][0]+NeighborColors[2][1]+NeighborColors[2][2])
+						];
+					biggerNeighbor = NeighborPower.indexOf(Math.max(...NeighborPower));
+					
+					newColor = [
+						(NeighborColors[0][0]+NeighborColors[1][0]+NeighborColors[2][0])/4,
+						(NeighborColors[0][1]+NeighborColors[1][1]+NeighborColors[2][1])/4,
+						(NeighborColors[0][2]+NeighborColors[1][2]+NeighborColors[2][2])/4
+					];
+					
+					newColor[biggerNeighbor] *= 2;
+					
+					xCells[x][y].nextColor = newColor;
 				}
 			}
 				
@@ -93,7 +133,9 @@ function checkCells() {
 	for (var x=0;x<xMax;x++) {
 		for (var y=0;y<yMax;y++) {
 			xCells[x][y].state = xCells[x][y].nextState;
+			xCells[x][y].color = xCells[x][y].nextColor;
 			xCells[x][y].nextState = 0;
+			xCells[x][y].nextColor = [0,0,0];
 		}
 	}
 }
@@ -102,7 +144,11 @@ function drawCells() {
 	for (var x=0;x<xMax;x++) {
 		for (var y=0;y<yMax;y++) {
 			if (xCells[x][y].state == 1) {
-				ctx.fillText("o", x*10, y*10);
+				// ctx.fillText("o", x*10, y*10);
+				
+				// We're going colored boxes! We also want them to inherit their parents color.
+				ctx.fillStyle = "rgba("+xCells[x][y].color[0]+","+xCells[x][y].color[1]+","+xCells[x][y].color[2]+",1)";
+				ctx.fillRect(x*10, y*10, 10, 10);
 			}	
 		}
 	}
