@@ -12,8 +12,7 @@ Studies, yes - This year... past year (happy new year 2023! I'm only a month lat
 After that, I started studying Cybersecurity... in late October. Sigh. Don't get me wrong, I'm enjoying what I'm seeing, but I just wish I had started earlier, and joined a real course. Now I have to wait the whole year! I do have the saving grace that Cybersecurity is generally just certificates.
 Shoutouts to r/cybersecurity and tryhackme.com
 
-As for personal projects, here's where I'd talk about them... IF I HAD ANY! Sorry! Most of my creative drive feels fulfilled by other works, such as TTRPGs or projects inside games.
+As for personal projects, here's where I'd talk about them... IF I HAD ANY! Sorry! Most of my creative drive feels fulfilled by other works, such as TTRPGs or projects inside games. Maybe I should give a tour of my Minecraft town in VR... it's a nice, relaxing place I built for myself.
 
-Maybe I should give a tour of my Minecraft town in VR... it's a nice, relaxing place I built for myself.
-
+Although I did toy around and made Game of Life on JavaScript... after making it in Garry's Mod with Expression2 (not recommended, that one's prone to crashing). (Warning: JavaScript heavy, may slow down weak computers) Check it out at https://htmlpreview.github.io/?https://github.com/JackTheRedCreeper/website/blob/master/GOL.html - zoom out and scroll around!
 And remember, you're a hero for visiting!
