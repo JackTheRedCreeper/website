@@ -1,3 +1,4 @@
+# This script will look for .webm files in the folder it is in, convert them to .png and store the converted version in a "result" folder
 import os
 import math
 from PIL import Image
