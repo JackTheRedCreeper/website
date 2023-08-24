@@ -1,3 +1,4 @@
+# This script checks for videos in a "videos" folder inside the folder the script is in, and extracts their audio tracks into .mp3 files
 import os
 import moviepy.editor as mp
 
