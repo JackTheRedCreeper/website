@@ -1,4 +1,4 @@
-# This script downloads a video from Youtube by providing it with a URL to the video
+# This script downloads a video from Youtube by providing it with a URL to the video, and saves the file to a "videos" folder next to the script's file
 from pytube import YouTube
 import os
 
