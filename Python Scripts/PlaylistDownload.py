@@ -1,3 +1,4 @@
+# This script downloads the videos from a Youtube playlist by providing it with a URL to the playlist itself, and saves the files to a "videos" folder next to the script's file
 from pytube import YouTube
 from pytube import Playlist
 import os
