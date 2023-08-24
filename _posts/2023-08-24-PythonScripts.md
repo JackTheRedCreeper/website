@@ -13,7 +13,6 @@ The next three are Youtube related: One lets you download videos from a URL, ano
 
 All scripts have comments inside them to highlight some quirks, and to make them easier to understand and edit.
 
-You can find the scripts here:
-[link]
+<a href="https://github.com/JackTheRedCreeper/website/tree/master/Python%20Scripts">You can find the scripts here.</a>
 
 As always, thank you for reading!
