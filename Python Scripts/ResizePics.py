@@ -1,3 +1,4 @@
+# This script will look for non-gif files in the folder it is in, scale them down to a set maximum height/width, convert them to .png and store the finished image in a "result" folder
 import os
 import math
 from PIL import Image
