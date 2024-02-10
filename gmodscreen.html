@@ -6,22 +6,28 @@
                 padding:0px;
                 background-color:#000000;
             }
-            div {
-                margin: auto;
-                height: 100%;
+            #inner {
+                height:100%
+                margin: 0 auto;
+            }
+            #outer {
+              height:100%;
+              display: flex;
+              justify-content: center;
             }
             video {
-                margin: auto;
                 height: 100%;
             }
         </style>
         
     </head>
     <body>
-        <div>
-            <video autoplay loop>
-              <source src="loadingVideo.mp4" type="video/mp4">
-            </video>
-        </div>
+        <flexbox id="outer">
+            <div id="inner">
+                <video autoplay loop>
+                  <source src="loadingVideo.mp4" type="video/mp4">
+                </video>
+            </div>
+        </flexbox>
     </body>
 </html>
